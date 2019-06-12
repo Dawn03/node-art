@@ -1,28 +1,24 @@
-
-
-//获取文件操作对象实例
-// var fs = require('fs');
-// var http = require('http');
-var path = require('path');
-var express = require('express');
-var app = express();
-var template = require('art-template');
+let express = require('express');
+let app = express();
+let path = require('path');
 
 app.set('views', path.join(__dirname, 'views'));
 
-template.config('base', '');
-template.config('extname', '.html');
-// 
-app.engine('.html', template.__express);
-app.set('view engine', 'html');
+//设置静态目录
+// app.use(express.static(__dirname + "/static"));
+app.use(express.static(path.join(__dirname, 'views')))
+// app.use(express.static('static'));
+// template.config('base', '');
+// template.config('extname', '.html');
+// app.engine('.html', template.__express);
+// app.set('view engine', 'html');
 
+app.engine('html', require('express-art-template'));
+app.set('view options', {
+    debug: process.env.NODE_ENV !== 'production'
+});
 
-
-
-var routes = require('./routes/index');
+let routes = require('./routers/index');
 app.use(routes);
-// app.use('/', routes);
-//创建服务器，并绑定8888端口
-app.listen(3000)
-console.log('3000')
-
+app.listen(3005);
+console.log('server start at localhost:3005');

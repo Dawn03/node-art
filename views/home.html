@@ -1,0 +1,542 @@
+{{extend "./publice/layout.html"}}
+{{block 'header'}}
+<link rel="stylesheet" href="./css/index.css" type="text/css">
+{{/block}}
+{{block 'content'}}
+<!--content开始-->
+<div class="index-content">
+    <!--banner S-->
+    <div class="banner clearfix">
+        <ul class="advert">
+            <li><a href="###"><img src="images/banner1.jpg" alt="名侦探柯南"></a></li>
+        </ul>
+        <div class="code">
+            <span class="arrow-l fl"></span>
+            <span class="arrow-r fr"></span>
+            <ul class="fl">
+                <li class="current"><a href="###"><img src="images/banner1.jpg" alt="名侦探柯南"></a></li>
+                <li><a href="###"><img src="images/banner2.jpg" alt="名侦探柯南"></a></li>
+                <li><a href="###"><img src="images/banner4.jpg" alt="名侦探柯南"></a></li>
+                <li><a href="###"><img src="images/banner3.jpg" alt="名侦探柯南"></a></li>
+                <li><a href="###"><img src="images/banner2.jpg" alt="名侦探柯南"></a></li>
+                <li><a href="###"><img src="images/banner1.jpg" alt="名侦探柯南"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--banner E-->
+<div class="index-main clearfix">
+    <!--正在热播S-->
+    <div class="main-l fl">
+        <div class="wrap-content clearfix">
+            <div class="hot-play clearfix ">
+                <h2 class="ry fl">正在热映(55部)</h2>
+                <a href="###" class="all fr">全部</a>
+            </div>
+            <ul class="hot-ul">
+                {{each list}}
+                <li>
+                    <i class="d-classify"><img src="./images/{{$value.movieType}}.png" alt=""></i>
+                    <a class="hot-img" href="detail.html">
+                        {{set temp = $value.movieScore}}
+                        <span class="score ">
+                            <i class="score-l">{{temp.split('.')[0]}}</i>
+                            <i class="score-s">{{temp.split('.')[1]}}</i>
+                        </span>
+                        <img src="{{$value.url}}" alt="">
+                    </a>
+                    <a class="hot-title" href="">购票</a>
+                </li>
+
+                {{/each}}
+            </ul>
+        </div>
+        <!--正在热播E-->
+        <!--即将上映S-->
+        <div class="wrap-content">
+            <div class="advance clearfix">
+                <h2 class="ry fl">即将上映(276部)</h2>
+                <a href="###" class="all fr">全部</a>
+            </div>
+            <ul class="advance-ul clearfix">
+                <li>
+                    <i class="d-classify"><img src="images/3DMAX.png" alt=""></i>
+                    <div class="advance-div">
+                        <a href="detail.html">
+                            <img src="images/tu8.jpeg" alt="">
+                            <span class="advance-tit">你的名字</span>
+                        </a>
+                        <h4 class="want">134人想看</h4>
+                        <span class="pre-sale">
+                            <a href="###">预告片</a>
+                            <a class="ys" href="###">预售</a>
+                        </span>
+                    </div>
+                    <h3 class="pre-time">12月26日上映</h3>
+                </li>
+                <li>
+                    <i class="d-classify"><img src="images/3DMAX.png" alt=""></i>
+                    <div class="advance-div">
+                        <a href="">
+                            <img src="images/tu4.jpeg" alt="">
+                            <span class="advance-tit">你的名字</span>
+                        </a>
+                        <h4 class="want">134人想看</h4>
+                        <span class="pre-sale">
+                            <a href="###">预告片</a>
+                            <a class="ys" href="###">预售</a>
+                        </span>
+                    </div>
+                    <h3 class="pre-time">12月26日上映</h3>
+                </li>
+                <li>
+                    <i class="d-classify"><img src="images/2DIMAX.png" alt=""></i>
+                    <div class="advance-div">
+                        <a href="">
+                            <img src="images/hot1.jpeg" alt="">
+                            <span class="advance-tit">爱你的人</span>
+                        </a>
+                        <h4 class="want">134人想看</h4>
+                        <span class="pre-sale">
+                            <a href="###">预告片</a>
+                            <a class="ys" href="###">预售</a>
+                        </span>
+                    </div>
+                    <h3 class="pre-time">12月26日上映</h3>
+                </li>
+
+                <li>
+                    <div class="advance-div">
+                        <a href="">
+                            <img src="images/your-name.jpeg" alt="">
+                            <span class="advance-tit">你的名字</span>
+                        </a>
+                        <h4 class="want">134人想看</h4>
+                        <span class="pre-sale">
+                            <a href="###">预告片</a>
+                            <a class="ys" href="###">预售</a>
+                        </span>
+                    </div>
+                    <h3 class="pre-time">12月26日上映</h3>
+                </li>
+
+                <li>
+                    <div class="advance-div">
+                        <a href="">
+                            <img src="images/your-name.jpeg" alt="">
+                            <span class="advance-tit">你的名字</span>
+                        </a>
+                        <h4 class="want">134人想看</h4>
+                        <span class="pre-sale">
+                            <a href="###">预告片</a>
+                            <a class="ys" href="###">预售</a>
+                        </span>
+                    </div>
+                    <h3 class="pre-time">12月26日上映</h3>
+                </li>
+
+                <li>
+                    <div class="advance-div">
+                        <a href="">
+                            <img src="images/your-name.jpeg" alt="">
+                            <span class="advance-tit">你的名字</span>
+                        </a>
+                        <h4 class="want">134人想看</h4>
+                        <span class="pre-sale">
+                            <a href="###">预告片</a>
+                            <a class="ys" href="###">预售</a>
+                        </span>
+                    </div>
+                    <h3 class="pre-time">12月26日上映</h3>
+                </li>
+                <li>
+                    <i class="d-classify"><img src="images/3DMAX.png" alt=""></i>
+                    <div class="advance-div">
+                        <a href="">
+                            <img src="images/your-name.jpeg" alt="">
+                            <span class="advance-tit">你的名字</span>
+                        </a>
+                        <h4 class="want">134人想看</h4>
+                        <span class="pre-sale">
+                            <a href="###">预告片</a>
+                            <a class="ys" href="###">预售</a>
+                        </span>
+                    </div>
+                    <h3 class="pre-time">12月26日上映</h3>
+                </li>
+
+                <li>
+                    <div class="advance-div">
+                        <a href="">
+                            <img src="images/your-name.jpeg" alt="">
+                            <span class="advance-tit">你的名字</span>
+                        </a>
+                        <h4 class="want">134人想看</h4>
+                        <span class="pre-sale">
+                            <a href="###">预告片</a>
+                            <a class="ys" href="###">预售</a>
+                        </span>
+                    </div>
+                    <h3 class="pre-time">12月26日上映</h3>
+                </li>
+
+
+            </ul>
+        </div>
+        <!--即将上映E-->
+        <!--热播电影 S-->
+        <div class="wrap-content">
+            <div class="rebo clearfix">
+                <h2 class="ry fl">热播电影</h2>
+                <ul class=" rebo-menu">
+                    <li><a href="">爱情</a></li>
+                    <li><a href="">喜剧</a></li>
+                    <li><a href="">动作</a></li>
+                    <li><a href="">恐怖</a></li>
+                    <li><a href="">动画</a></li>
+                </ul>
+                <a href="###" class="all fr">全部</a>
+            </div>
+            <div class="rebo-movies clearfix">
+                <div class="rebo-l fl">
+                    <!--<i class="d-classify"><img src="images/3D.png" alt=""></i>-->
+                    <a class="hot-img" href="detail.html">
+                        <span class="movies-tit ">战狼</span>
+                        <span class="score ">
+                            <i class="score-l">8.</i>
+                            <i class="score-s">9</i>
+                        </span>
+                        <img src="images/wid.jpeg" alt="">
+                    </a>
+                </div>
+                <ul class="rebo-ul">
+                    <li>
+
+                        <i class="d-classify"><img src="images/3D.png" alt=""></i>
+                        <a class="hot-img" href="detail.html">
+                            <span class="movies-tit ">爱你的人</span>
+                            <span class="score ">
+                                <i class="score-l">8.</i>
+                                <i class="score-s">9</i>
+                            </span>
+                            <img src="images/knan.jpeg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <i class="d-classify"><img src="images/3D.png" alt=""></i>
+                        <a class="hot-img" href="detail.html">
+                            <span class="movies-tit ">爱你的人</span>
+                            <span class="score ">
+                                <i class="score-l">8.</i>
+                                <i class="score-s">9</i>
+                            </span>
+                            <img src="images/knan.jpeg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <i class="d-classify"><img src="images/3D.png" alt=""></i>
+                        <a class="hot-img" href="detail.html">
+                            <span class="movies-tit ">名侦探柯南</span>
+                            <span class="score ">
+                                <i class="score-l">8.</i>
+                                <i class="score-s">9</i>
+                            </span>
+                            <img src="images/knan.jpeg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <i class="d-classify"><img src="images/3D.png" alt=""></i>
+                        <a class="hot-img" href="detail.html">
+                            <span class="movies-tit ">名侦探柯南</span>
+                            <span class="score ">
+                                <i class="score-l">8.</i>
+                                <i class="score-s">9</i>
+                            </span>
+                            <img src="images/knan.jpeg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <i class="d-classify"><img src="images/3D.png" alt=""></i>
+                        <a class="hot-img" href="detail.html">
+                            <span class="movies-tit ">名侦探柯南</span>
+                            <span class="score ">
+                                <i class="score-l">8.</i>
+                                <i class="score-s">9</i>
+                            </span>
+                            <img src="images/knan.jpeg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <i class="d-classify"><img src="images/3D.png" alt=""></i>
+                        <a class="hot-img" href="detail.html">
+                            <span class="movies-tit ">名侦探柯南</span>
+                            <span class="score ">
+                                <i class="score-l">8.</i>
+                                <i class="score-s">9</i>
+                            </span>
+                            <img src="images/knan.jpeg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--热播电影 E-->
+    </div>
+
+    <!--首页右边部分 S-->
+    <div class="main-r fr">
+        <div class="wrap-right">
+            <div class="today clearfix">
+                <h2 class="ry">今日票房</h2>
+            </div>
+            <div class="num1 clearfix">
+                <i class="cup"></i>
+                <a href="###">
+                    <img class="num1-img fl" src="images/shenqi.jpeg" alt="神奇动物在哪里">
+                    <div class="num1-div fr">
+                        <h3 class="tit tx_over">神奇动物在哪里</h3>
+                        <p class="count">5203.28万</p>
+                    </div>
+                </a>
+            </div>
+            <ul class="num1-ul clearfix">
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>2</i>惊天破</h3>
+                        <p class=" fr">1000.00万</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>3</i>湄公河行动</h3>
+                        <p class=" fr">999.99万</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>4</i>侠探杰克：永不回头</h3>
+                        <p class=" fr">888.88万</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>5</i>龙珠Z：复活的弗利萨</h3>
+                        <p class=" fr">756.00万</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>6</i>从你的全世界路过</h3>
+                        <p class=" fr">777.77万</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>7</i>圆梦巨人</h3>
+                        <p class=" fr">666.66万</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>8</i>凶手还未睡</h3>
+                        <p class=" fr">555.55万</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>9</i>勇士</h3>
+                        <p class=" fr">444.44万</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>10</i>遵义会议</h3>
+                        <p class=" fr">222.22万</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="today-pan">
+                <span class="td-pan">今日盘点</span>
+                <div class="td-r fr">
+                    <div class="total clearfix">
+                        <h2 class="ry fl">1.03 <i class="unit">亿</i></h2>
+                        <a href="###" class="all fr">查看更多</a>
+                    </div>
+                    <p class="bt-time">
+                        <span class="fl">北京时间22:46:26</span>
+                        <span class="fr">猫眼专业版实时票房数据</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-right">
+            <div class="wish">
+                <div class="wishes clearfix">
+                    <h2 class="ry fl">最受期待</h2>
+                    <a href="###" class="all fr">查看完整榜单</a>
+                </div>
+            </div>
+            <ul class="wish-ul clearfix">
+                <li class="li-first">
+                    <a href="###">
+                        <i class="fire"></i>
+                        <img class="fl" src="images/your-name.jpeg" alt="你的名字">
+                        <div class="wish-div">
+                            <h3 class="wish-tit ">你的名字</h3>
+                            <p class="show-time">上映时间:2016</p>
+                            <p class="want-watch">111111人想看</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="li-second">
+                    <a href="###">
+                        <i class="turn">2</i>
+                        <img src="images/pin.jpeg" alt="长城">
+                        <div class="second-div">
+                            <h3 class="wish-tit"> 长城</h3>
+                            <p class="want-watch">123345人想看</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="li-second">
+                    <a href="###">
+                        <i class="turn">3</i>
+                        <img src="images/baiduren.jpg" alt="摆渡人">
+                        <div class="second-div">
+                            <h3 class="wish-tit">摆渡人</h3>
+                            <p class="want-watch">123345人想看</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>4</i>你的名字。</h3>
+                        <p class="wish-num fr">1332455人想看</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>5</i>你就是潘金莲</h3>
+                        <p class="wish-num fr">3455266人想看</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>6</i>长城</h3>
+                        <p class="wish-num fr">345526人想看</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>7</i>最萌身高差</h3>
+                        <p class="wish-num fr">222222人想看</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>8</i>但丁密码</h3>
+                        <p class="wish-num fr">34555266人想看</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>9</i>大闹天竺</h3>
+                        <p class="wish-num fr">3 人想看</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>10</i>28岁未成年</h3>
+                        <p class="wish-num fr">3422556人想看</p>
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </div>
+        <div class="wrap-right">
+            <div class="orders">
+                <div class="order clearfix">
+                    <h2 class="ry fl">TOP 100</h2>
+                    <a class="all fr" href="###">查看完整榜单</a>
+                </div>
+            </div>
+            <div class="num2 clearfix">
+                <i class="cup"></i>
+                <a href="###">
+                    <img class="num1-img fl" src="images/bawangbieji.jpeg" alt="霸王别姬">
+                    <div class="num1-div fr">
+                        <h3 class="tit tx_over">霸王别姬</h3>
+                        <p class="count">9.6分</p>
+                    </div>
+                </a>
+            </div>
+            <ul class="num2-ul clearfix">
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>2</i>肖申克的救赎</h3>
+                        <p class=" fr">9.4分</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>3</i>这个杀手不太冷</h3>
+                        <p class=" fr">9.4分</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>4</i>罗马假日</h3>
+                        <p class=" fr">9.4分</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>5</i>阿甘正传</h3>
+                        <p class=" fr">9.2分</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>6</i>泰塔尼克号</h3>
+                        <p class=" fr">9.2分</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>7</i>龙猫</h3>
+                        <p class=" fr">9.2分</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>8</i>教父</h3>
+                        <p class=" fr">9.1分</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>9</i>唐伯虎点秋香</h3>
+                        <p class=" fr">9.1分</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <h3 class="fl"><i>10</i>千与千寻</h3>
+                        <p class=" fr">9.0分</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--首页右边部分 E-->
+</div>
+{{/block}}
+{{block "script"}}
+<script>
+    function test() {
+        console.log(111111111111)
+    }
+</script>
+{{/block}}

@@ -1,0 +1,39 @@
+{{extend "./publice/layout.html"}}
+{{block 'header'}}
+<link rel="stylesheet" href="./css/bangan.css" type="text/css">
+{{/block}}
+
+{{block "content"}}
+
+<div class="bd-content clearfix">
+    <p>2016-12-2 <i>已更新</i></p>
+    <p>
+        榜单规则：将国内热映的影片，按照评分从高到低排列
+        取前10名，每天上午10点更新。相关数据来源于“猫眼
+        专业版”及“猫眼电影库”。
+    </p>
+    <ul>
+        {{each dblist}}
+        <li>
+            <span class="{{$value.number}}  fl"></span>
+            <a class="fl" href="####"><img src="{{$value.url}}" alt=""></a>
+            <div class="details fr">
+                <div class="detail-l fl">
+                    <h2>{{$value.movieName}}</h2>
+                    <p class="de-pl">主演：{{$value.actors}}</p>
+                    <p>上映时间：2016-09-30</p>
+                </div>
+                <p class="fr de-pr">9.<i>3</i></p>
+            </div>
+        </li>
+        {{/each}}
+
+
+    </ul>
+</div>
+{{/block}}
+{{block "script"}}
+<script>
+    console.log('db')
+</script>
+{{/block}}

@@ -1,0 +1,250 @@
+@charset "utf-8";
+/*导航 css S*/
+.index-header-content{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background: #fff;
+    border-bottom: 1px solid #d8d8d8;
+}
+.index-header{
+    width: 1200px;
+    margin: 0 auto;
+
+}
+.index-logo{
+    display: block;
+    width: 133px;
+    height: 80px;
+    background: url(../images/login-icon.png) no-repeat -536px -702px;
+}
+.index-header .header-fr1{
+    position: relative;
+    padding:0 10px;
+    margin-left: 10px;
+    width: 48px;
+    color: #333;
+    font: normal 15px/80px "Microsoft YaHei";
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-top: none;
+}
+.index-header .header-fr1:hover{
+    border: 1px solid #ccc;
+    border-top: none ;
+    border-bottom: #fff;
+}
+.cities{
+    display: none;
+    position: absolute;
+    left: -1px;
+    bottom: -332px;
+    width: 460px;
+    height: 330px;
+    overflow-y:auto;
+    border: 1px solid #ccc;
+    border-top: 1px solid transparent;
+    background: #fff;
+}
+.cities p{
+    padding-left: 20px;
+    height: 49px;
+    line-height: 49px;
+    border-bottom: 1px solid #ccc;
+}
+.cities-ul li{
+    width: 460px;
+    line-height: 30px;
+}
+.letter{
+    margin-left: 20px;
+    width: 20px;
+    text-align: center;
+    float: left;
+    vertical-align: top;
+    display: block;
+    background-color: #eee;
+    font-weight: 700;
+    line-height: 20px;
+    margin-top: 5px;
+}
+.letters{
+    margin-left: 40px;
+    display: block;
+    margin-bottom: 10px
+}
+.letters a{
+    display: inline-block;
+    line-height: 24px;
+    margin-top: 3px;
+    padding: 0 5px;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+}
+.letters a:hover{
+    color: #fff;
+    background: #ef4238;
+}
+.header-fr1:hover .cities{
+    display: block;
+}
+.header-fr2{
+    width: 320px;
+    margin-left: 38px;
+}
+.header-fr2 ul li{
+    float: left;
+    font: normal 18px/80px "Microsoft YaHei";
+    text-align: center;
+}
+.header-fr2 ul li a{
+    display: block;
+    width: 80px;
+    height: 80px;
+    color: #333;
+    background-color: transparent;
+}
+.header-fr2 ul li .on{
+    color: #fff;
+    background-color: #ef4238;
+}
+.header-fr2 ul li a:hover{
+    color: #ef4238;
+}
+.header-fr2 ul li .on:hover{
+    color: #fff;
+}
+.header-fr3{
+    position: relative;
+    margin-top: 20px;
+    width: 260px;
+    height: 38px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    background: #faf8fa;
+
+
+}
+.header-fr3 input{
+    width: 200px;
+    height: 37px;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 37px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+
+}
+
+.header-fr3 .search-btn{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    background-color: #ef4238;
+    background-image: url(../images/index-search.png) ;
+    background-repeat: no-repeat;
+}
+.header-fr4{
+    position: relative;
+    margin-left: 20px;
+    width: 76px;
+    height: 79px;
+    border: 1px solid transparent;
+    border-top: none;
+
+}
+.header-fr4 .head{
+    position: absolute;
+    display: inline-block;
+    left: 10px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+}
+.header-fr4 .head img{
+    width:100%;
+    height: 100%;
+}
+.header-fr4 .index-login{
+    padding-right: 10px;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 66px;
+    height: 40px;
+    color: #999;
+    line-height: 40px;
+    text-align: right;
+    background: #fff;
+
+
+}
+.header-fr4:hover{
+    height: 119px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.header-fr4:hover .index-login{
+    display: block;
+    color: #999;
+
+
+}
+.header-fr4 .index-login:hover {
+    color: #ef4238;
+    text-decoration: underline;
+}
+/*导航 css E*/
+
+
+.triangle{
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 5px;
+    border: 5px solid transparent;
+}
+.triangle1{
+    top: 40px;
+    right: 10px;
+    border-top: 5px solid #666;
+}
+.header-fr1:hover .triangle1,.header-fr4:hover .triangle1{
+    top: 27px;   top: 40px\0;
+    transition: all linear 0s;
+    -webkit-transition: all linear 0s;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+
+/* footer Start */
+
+.footer {
+    margin-top: 80px;
+    padding-top: 55px;
+    width: 100%;
+    height: 95px;
+    background: #262426;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0 auto;
+    line-height: 20px;
+    font-size: 14px;
+    color: #666;
+
+}
+
+/* footer End */
